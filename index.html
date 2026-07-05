@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOTZIY | Editorial Experience</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,500;1,300&family=Montserrat:wght@200;300;400&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/blasten/turn.js/turn.min.js"></script>
+
+    <style>
+        :root {
+            --bg-color: #e8e4e1; 
+            --text-main: #2a2a2a;
+            --accent: #8d775f;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+            font-family: 'Cormorant Garamond', serif;
+            color: var(--text-main);
+        }
+
+        .btn-back {
+            position: fixed; top: 40px; left: 40px; z-index: 1000;
+            font-family: 'Montserrat', sans-serif; font-size: 0.6rem;
+            letter-spacing: 3px; text-decoration: none; color: var(--text-main);
+            border: 1px solid rgba(0,0,0,0.1); padding: 12px 24px;
+            background: rgba(255,255,255,0.3); backdrop-filter: blur(10px);
+            transition: 0.4s;
+        }
+        .btn-back:hover { background: var(--text-main); color: white; }
+
+        .model-vertical {
+            position: fixed; right: 20px; top: 50%;
+            transform: translateY(-50%) rotate(90deg);
+            transform-origin: right center;
+            font-family: 'Montserrat', sans-serif; font-size: 0.65rem;
+            letter-spacing: 8px; text-transform: uppercase;
+            color: var(--text-main); white-space: nowrap; opacity: 0.6; z-index: 500;
+        }
+
+        .dev-credit {
+            position: fixed; bottom: 30px; left: 40px;
+            font-family: 'Montserrat', sans-serif; font-size: 0.55rem;
+            letter-spacing: 2px; text-transform: uppercase; opacity: 0.5; z-index: 500;
+        }
+
+        #magazine { width: 1100px; height: 700px; box-shadow: 0 50px 100px rgba(0,0,0,0.12); }
+
+        .page {
+            width: 550px; height: 700px;
+            background-color: white;
+            overflow: hidden;
+            position: relative;
+            padding: 60px;
+            box-sizing: border-box;
+        }
+
+        /* Clase para páginas con imagen */
+        .page-image { padding: 0 !important; }
+
+        .photo-full { 
+            width: 100%; height: 100%; 
+            object-fit: cover; /* Mantiene la proporción y llena el cuadro */
+            display: block;
+        }
+
+        .credits-page {
+            background-color: #111111; color: #ffffff;
+            display: flex; flex-direction: column;
+            justify-content: center; align-items: center; text-align: center;
+        }
+
+        .credits-container { width: 100%; max-width: 320px; }
+        .credits-page h2 { font-size: 2rem; font-weight: 300; margin-bottom: 40px; letter-spacing: 5px; text-transform: uppercase; }
+        .credit-item { margin-bottom: 20px; }
+        .role { font-size: 0.5rem; letter-spacing: 3px; text-transform: uppercase; color: var(--accent); display: block; margin-bottom: 4px; }
+        .handle { font-size: 1.1rem; font-style: italic; color: #fff; text-decoration: none; display: block; }
+        .line-sep { width: 30px; height: 1px; background: rgba(255,255,255,0.1); margin: 30px auto; }
+
+        .p1 { justify-content: center; align-items: center; text-align: center; background-color: #fdfdfb; display: flex; flex-direction: column; }
+        .p1 h1 { font-weight: 300; font-size: 4.5rem; letter-spacing: 15px; margin: 0; }
+    </style>
+</head>
+<body>
+
+    <a href="index.html" class="btn-back">← PORTFOLIO</a>
+    <div class="model-vertical">MODEL // NOMBRE DEL MODELO</div>
+    <div class="dev-credit">Dev by hotziy.studio</div>
+
+    <div id="magazine">
+        <div class="page p1">
+            <p style="letter-spacing: 6px; font-size: 0.7rem; font-family: 'Montserrat';">NO. 01</p>
+            <div style="width: 30px; height: 1px; background: var(--accent); margin: 25px 0;"></div>
+            <h1>HOTZIY</h1>
+            <p style="margin-top: 20px; font-family: 'Montserrat'; font-size: 0.6rem; letter-spacing: 3px;">STUDIO COLLECTIVE</p>
+        </div>
+
+        <div class="page" style="display: flex; justify-content: center; align-items: center; background: #fafafa;">
+            <p style="font-size: 1.4rem; line-height: 1.8; font-style: italic; color: #444; padding: 40px;">
+                "Hotziy Studio explora la intersección entre la luz cruda y la quietud bohemia, donde cada imagen funciona como un verso visual sobre la identidad."
+            </p>
+        </div>
+
+        <div class="page page-image"><img src="C:\Users\ASUS\Documents\HOTZIY.STUDIO\ACTIVO\VIBES\PIEZAS INDIVIDUALES\portada.png" class="photo-full"></div>
+        <div class="page page-image"><img src="C:\Users\ASUS\Documents\HOTZIY.STUDIO\ACTIVO\VIBES\PIEZAS INDIVIDUALES\2°.png" class="photo-full"></div>
+        <div class="page page-image"><img src="C:\Users\ASUS\Documents\HOTZIY.STUDIO\ACTIVO\VIBES\PIEZAS INDIVIDUALES\3°.png" class="photo-full"></div>
+        <div class="page page-image"><img src="C:\Users\ASUS\Documents\HOTZIY.STUDIO\ACTIVO\VIBES\PIEZAS INDIVIDUALES\4°.png" class="photo-full"></div>
+        <div class="page page-image"><img src="C:\Users\ASUS\Documents\HOTZIY.STUDIO\ACTIVO\VIBES\PIEZAS INDIVIDUALES\5°.png" class="photo-full"></div>
+        <div class="page page-image"><img src="C:\Users\ASUS\Documents\HOTZIY.STUDIO\ACTIVO\VIBES\PIEZAS INDIVIDUALES\contraportada.png" class="photo-full"></div>
+
+        <div class="page credits-page">
+            <div class="credits-container">
+                <h2>The Team</h2>
+                <div class="credit-item"><span class="role">Fotografía</span><a href="#" class="handle">@usuario_ig</a></div>
+                <div class="credit-item"><span class="role">Diseño Web</span><a href="#" class="handle">@usuario_ig</a></div>
+                <div class="credit-item"><span class="role">Diseño de Moda</span><a href="#" class="handle">@usuario_ig</a></div>
+                <div class="credit-item"><span class="role">Dirección Creativa</span><a href="#" class="handle">@usuario_ig</a></div>
+                <div class="credit-item"><span class="role">Modelo</span><a href="#" class="handle">@usuario_ig</a></div>
+                <div class="line-sep"></div>
+                <a href="#" class="handle" style="font-size: 0.9rem; opacity: 0.6;">@hotziy.studio</a>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#magazine').turn({
+                width: 1100, 
+                height: 700,
+                autoCenter: true, 
+                display: 'double',
+                acceleration: true, 
+                gradients: true, 
+                elevation: 50
+            });
+        });
+        $(window).bind('keydown', function(e){
+            if (e.keyCode == 37) $('#magazine').turn('previous');
+            else if (e.keyCode == 39) $('#magazine').turn('next');
+        });
+    </script>
+</body>
+</html>
