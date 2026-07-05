@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HOTZIY | Editorial Experience</title>
+    <title>VIBES-PROOF EDITION</title>
     
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,500;1,300&family=Montserrat:wght@200;300;400&display=swap" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -88,65 +88,84 @@
 
         .p1 { justify-content: center; align-items: center; text-align: center; background-color: #fdfdfb; display: flex; flex-direction: column; }
         .p1 h1 { font-weight: 300; font-size: 4.5rem; letter-spacing: 15px; margin: 0; }
+        .nav-arrow {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    color: var(--accent);
+    cursor: pointer;
+    z-index: 1001;
+    padding: 20px;
+    transition: opacity 0.3s;
+}
+
+.prev-arrow { left: 50px; }
+.next-arrow { right: 50px; }
+
+.nav-arrow:hover { opacity: 0.5; }
     </style>
 </head>
 <body>
 
-    <a href="index.html" class="btn-back">← PORTFOLIO</a>
-    <div class="model-vertical">MODEL // NOMBRE DEL MODELO</div>
-    <div class="dev-credit">Dev by hotziy.studio</div>
+    <a href="index.html" class="btn-back"></a>
+    <div class="model-vertical">HOTZIY/ STUDIO</div>
+    <div class="dev-credit">Dev by Hernan Ordoñez</div>
 
     <div id="magazine">
         <div class="page p1">
-            <p style="letter-spacing: 6px; font-size: 0.7rem; font-family: 'Montserrat';">NO. 01</p>
+            <p style="letter-spacing: 6px; font-size: 0.7rem; font-family: 'Montserrat';">CUN</p>
             <div style="width: 30px; height: 1px; background: var(--accent); margin: 25px 0;"></div>
-            <h1>HOTZIY</h1>
-            <p style="margin-top: 20px; font-family: 'Montserrat'; font-size: 0.6rem; letter-spacing: 3px;">STUDIO COLLECTIVE</p>
+            <h1>ACA</h1>
+            <p style="margin-top: 20px; font-family: 'Montserrat'; font-size: 0.6rem; letter-spacing: 3px;">HERRAMIENTAS DE INVESTIGACION</p>
         </div>
 
         <div class="page" style="display: flex; justify-content: center; align-items: center; background: #fafafa;">
             <p style="font-size: 1.4rem; line-height: 1.8; font-style: italic; color: #444; padding: 40px;">
-                "Hotziy Studio explora la intersección entre la luz cruda y la quietud bohemia, donde cada imagen funciona como un verso visual sobre la identidad."
+                " Utiliza el entorno de La Cumbre, Valle, Colombia como un espejo 
+                psicogeográfico para explorar el vacío, la melancolía, el misterio 
+                e inquietud"
             </p>
         </div>
 
-        <div class="page page-image"><img src="C:\Users\ASUS\Documents\HOTZIY.STUDIO\ACTIVO\VIBES\PIEZAS INDIVIDUALES\portada.png" class="photo-full"></div>
-        <div class="page page-image"><img src="C:\Users\ASUS\Documents\HOTZIY.STUDIO\ACTIVO\VIBES\PIEZAS INDIVIDUALES\2°.png" class="photo-full"></div>
-        <div class="page page-image"><img src="C:\Users\ASUS\Documents\HOTZIY.STUDIO\ACTIVO\VIBES\PIEZAS INDIVIDUALES\3°.png" class="photo-full"></div>
-        <div class="page page-image"><img src="C:\Users\ASUS\Documents\HOTZIY.STUDIO\ACTIVO\VIBES\PIEZAS INDIVIDUALES\4°.png" class="photo-full"></div>
-        <div class="page page-image"><img src="C:\Users\ASUS\Documents\HOTZIY.STUDIO\ACTIVO\VIBES\PIEZAS INDIVIDUALES\5°.png" class="photo-full"></div>
-        <div class="page page-image"><img src="C:\Users\ASUS\Documents\HOTZIY.STUDIO\ACTIVO\VIBES\PIEZAS INDIVIDUALES\contraportada.png" class="photo-full"></div>
-
-        <div class="page credits-page">
-            <div class="credits-container">
-                <h2>The Team</h2>
-                <div class="credit-item"><span class="role">Fotografía</span><a href="#" class="handle">@usuario_ig</a></div>
-                <div class="credit-item"><span class="role">Diseño Web</span><a href="#" class="handle">@usuario_ig</a></div>
-                <div class="credit-item"><span class="role">Diseño de Moda</span><a href="#" class="handle">@usuario_ig</a></div>
-                <div class="credit-item"><span class="role">Dirección Creativa</span><a href="#" class="handle">@usuario_ig</a></div>
-                <div class="credit-item"><span class="role">Modelo</span><a href="#" class="handle">@usuario_ig</a></div>
-                <div class="line-sep"></div>
-                <a href="#" class="handle" style="font-size: 0.9rem; opacity: 0.6;">@hotziy.studio</a>
-            </div>
-        </div>
+        <div class="page page-image"><img src="portada.webp" class="photo-full"></div>
+        <div class="page page-image"><img src="2°.webp" class="photo-full"></div>
+        <div class="page page-image"><img src="3°.webp" class="photo-full"></div>
+        <div class="page page-image"><img src="4°.webp" class="photo-full"></div>
+        <div class="page page-image"><img src="5°.webp" class="photo-full"></div>
+        <div class="page page-image"><img src="contraportada.webp" class="photo-full"></div>
     </div>
 
     <script type="text/javascript">
-        $(document).ready(function() {
-            $('#magazine').turn({
-                width: 1100, 
-                height: 700,
-                autoCenter: true, 
-                display: 'double',
-                acceleration: true, 
-                gradients: true, 
-                elevation: 50
-            });
+    $(document).ready(function() {
+        var magazine = $('#magazine');
+        
+        magazine.turn({
+            width: 1100, 
+            height: 700,
+            autoCenter: true, 
+            display: 'double',
+            acceleration: true, 
+            gradients: true, 
+            elevation: 50
         });
-        $(window).bind('keydown', function(e){
-            if (e.keyCode == 37) $('#magazine').turn('previous');
-            else if (e.keyCode == 39) $('#magazine').turn('next');
+
+        // Funcionalidad de las flechas
+        $('.prev-arrow').click(function() {
+            magazine.turn('previous');
         });
-    </script>
+
+        $('.next-arrow').click(function() {
+            magazine.turn('next');
+        });
+    });
+
+    $(window).bind('keydown', function(e){
+        if (e.keyCode == 37) $('#magazine').turn('previous');
+        else if (e.keyCode == 39) $('#magazine').turn('next');
+    });
+</script>
+    <div class="nav-arrow prev-arrow">&#10094;</div>
+<div class="nav-arrow next-arrow">&#10095;</div>
 </body>
 </html>
